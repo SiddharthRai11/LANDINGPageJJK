@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .vid{ width: 100%;
+    height: auto;}
+}
+@media(max-aspect-ratio: 16/9){
+    .vid{ width: auto;
+    height: 100%;}
+}
+.layer-bg {
+     /* Replace with your image */
+    
+    background-position: center;
+    transform: translateZ(-1px) scale(1);
+}
+
+.layer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    font-size: 30px;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #f5f2f24d;
+    animation: typing 4s steps(40) infinite;
+}
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.scroll-down span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about {
+    background-color: black;
+    color: white;
+    line-height: 25px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    z-index: -3;
+}
+
+.about .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('about-bg.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+
+
+.characters {
+    background-image: url(gojo.jpg);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.characters .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('characters-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.character-list {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 60px;
+}
+
+.character {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.character img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: scaleAnimation 2s infinite alternate;
+}
+@keyframes scaleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
